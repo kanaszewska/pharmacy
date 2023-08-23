@@ -1,32 +1,23 @@
 package com.debska.pharmacy.mapper;
 
-import com.debska.pharmacy.dto.OrderDTO;
+import com.debska.pharmacy.dto.respDTO.RespOrderDTO;
 import com.debska.pharmacy.entity.OrderEntity;
+
+import java.util.stream.Collectors;
 
 public class OrderMapper {
 
-    public static OrderDTO mapOrderEntityToDTO(OrderEntity orderEntity){
-        OrderDTO orderDTO = OrderDTO.builder()
-                .id(orderEntity.getId())
+    public static RespOrderDTO mapOrderEntityToDTO(OrderEntity orderEntity) {
+        RespOrderDTO respOrderDTO = RespOrderDTO.builder()
                 .status(orderEntity.getStatus())
-                .listOfDrugs(orderEntity.getListOfDrugs())
                 .wholePrice(orderEntity.getWholePrice())
-                .orderedDrugs(orderEntity.getOrderedDrugs())
+                .orderedDrugsDTO(orderEntity.getOrderedDrugsEntity().stream()
+                        .map(drugEntity -> DrugMapper.mapDrugEntityToDTO(drugEntity))
+                        .collect(Collectors.toList()))
+                .user(UserMapper.mapUserEntityToUserDTO(orderEntity.getUser()))
                 .build();
 
-        return orderDTO;
+        return respOrderDTO;
     }
 
-    public static OrderEntity mapOrderDTOToEntity(OrderDTO orderDTO){
-
-        OrderEntity orderEntity = OrderEntity.builder()
-                .id(orderDTO.getId())
-                .status(orderDTO.getStatus())
-                .listOfDrugs(orderDTO.getListOfDrugs())
-                .wholePrice(orderDTO.getWholePrice())
-                .orderedDrugs(orderDTO.getOrderedDrugs())
-                .build();
-
-        return orderEntity;
-    }
 }

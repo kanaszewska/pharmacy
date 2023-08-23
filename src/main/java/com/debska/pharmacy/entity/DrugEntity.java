@@ -6,17 +6,15 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.JdbcTypeCode;
-import org.hibernate.type.SqlTypes;
 
 import java.math.BigDecimal;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 @Builder
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-//students
 @Entity(name = "drugEntity")
 public class DrugEntity {
 
@@ -29,17 +27,15 @@ public class DrugEntity {
 
     @ManyToOne
     @JoinColumn(name = "producer_id")
-
     private ProducerEntity producerEntity;
 
     @ManyToMany
-    private Set<OrderEntity> orders;
+    @JoinTable(
+            name = "ordered_drugs",
+            joinColumns = @JoinColumn(name = "drugEntity_id"),
+            inverseJoinColumns = @JoinColumn(name = "orderEntity_id")
+    )
+    @JsonBackReference
+    private List<OrderEntity> orders = new ArrayList<>();
 
-
-    //todo
-    // 1. Add entity Order ( id, Status, List of Drugs, WholePrice) -- DONE!!
-    // 2. Create Enum Status (Created, Waiting, Payed, Send) -- DONE!!
-    // 3 Create endpoint which accept list of drugs and Create an Order
-    // 4. Create CRUD endpoint of Order
-    // 5. Create an endpoint which gives you possibility to move status into waiting (You need to include validation of the status)
 }

@@ -1,8 +1,9 @@
-package com.debska.pharmacy.example;
+package com.debska.pharmacy.enums;
 
 public enum Status {
     CREATED,
     WAITING,
     PAYED,
-    SEND
+    SEND,
+    DEFAULT
 }

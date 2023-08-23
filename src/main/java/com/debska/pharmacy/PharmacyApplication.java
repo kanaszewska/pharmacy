@@ -9,9 +9,4 @@ public class PharmacyApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PharmacyApplication.class, args);
 	}
-
 }
-//utworzyć encje producent i druga encje product
-//mozliwosc zapisania produktu
-//controller, service, repository
-//dodawanie, pobranie wszytskich i jednego, usuwanie

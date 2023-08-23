@@ -1,13 +1,12 @@
 package com.debska.pharmacy.dto;
 
-import com.debska.pharmacy.entity.OrderEntity;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
-import java.util.Set;
 
 
 @Builder
@@ -16,11 +15,13 @@ import java.util.Set;
 @AllArgsConstructor
 public class DrugDTO {
 
-    private int id;
+    @NotEmpty(message = "Name is mandatory")
     private String name;
+
     private int quantityOfTablets;
+
     private BigDecimal price;
+
     private ProducerDTO producerDTO;
-    private Set<OrderEntity> orders;
 
 }

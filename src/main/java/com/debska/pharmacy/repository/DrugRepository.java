@@ -10,9 +10,9 @@ import java.util.Optional;
 @Repository
 public interface DrugRepository extends CrudRepository<DrugEntity, Integer> {
 
-    Optional<DrugEntity> findDrugByName (String name);
+    Optional<DrugEntity> findDrugByName(String name);
 
     List<DrugEntity> findAll();
 
-
+    List<DrugEntity> findDrugsByIdIn(List<Integer> inventoryIdList);
 }

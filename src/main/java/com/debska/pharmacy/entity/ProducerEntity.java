@@ -1,6 +1,6 @@
 package com.debska.pharmacy.entity;
 
-import com.debska.pharmacy.example.Country;
+import com.debska.pharmacy.enums.Country;
 import jakarta.persistence.*;
 import lombok.*;
 

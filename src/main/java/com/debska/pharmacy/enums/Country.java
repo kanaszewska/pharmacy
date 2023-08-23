@@ -1,4 +1,4 @@
-package com.debska.pharmacy.example;
+package com.debska.pharmacy.enums;
 
 public enum Country {
     POLAND,
