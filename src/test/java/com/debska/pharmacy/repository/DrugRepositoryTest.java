@@ -4,14 +4,17 @@ import com.debska.pharmacy.entity.DrugEntity;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.annotation.DirtiesContext;
 
 import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.springframework.test.annotation.DirtiesContext.ClassMode.*;
 
 
 @DataJpaTest
+@DirtiesContext(classMode = AFTER_EACH_TEST_METHOD)
 class DrugRepositoryTest {
 
     @Autowired

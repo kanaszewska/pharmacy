@@ -9,26 +9,24 @@ public class DrugMapper {
 
     public static DrugDTO mapDrugEntityToDTO(DrugEntity drugEntity) {
 
-        DrugDTO drugDTO = DrugDTO.builder()
+        return DrugDTO.builder()
                 .name(drugEntity.getName())
                 .quantityOfTablets(drugEntity.getQuantityOfTablets())
                 .price(drugEntity.getPrice())
                 .producerDTO(ProducerMapper.mapProducerEntitytoDTO(drugEntity.getProducerEntity()))
                 .build();
 
-        return drugDTO;
     }
 
     public static DrugEntity mapDrugDTOToEntity(DrugDTO drugDTO, ProducerEntity producerEntity) {
 
-        DrugEntity drugEntity = DrugEntity.builder()
+        return DrugEntity.builder()
                 .name(drugDTO.getName())
                 .quantityOfTablets(drugDTO.getQuantityOfTablets())
                 .price(drugDTO.getPrice())
                 .producerEntity(producerEntity)
                 .build();
 
-        return drugEntity;
     }
 
 }

@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 public class OrderMapper {
 
     public static RespOrderDTO mapOrderEntityToDTO(OrderEntity orderEntity) {
-        RespOrderDTO respOrderDTO = RespOrderDTO.builder()
+        return RespOrderDTO.builder()
                 .status(orderEntity.getStatus())
                 .wholePrice(orderEntity.getWholePrice())
                 .orderedDrugsDTO(orderEntity.getOrderedDrugsEntity().stream()
@@ -17,7 +17,6 @@ public class OrderMapper {
                 .user(UserMapper.mapUserEntityToUserDTO(orderEntity.getUser()))
                 .build();
 
-        return respOrderDTO;
     }
 
 }
