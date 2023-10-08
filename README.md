@@ -1,11 +1,10 @@
 # Technologies Used
-* CSS
-* HTML5
-* JavaScript
-* React
-* React Router DOM
-* Redux
-* Axios
+* Java
+* Spring Boot
+* Hibernate
+* Maven
+* Rest API
+* Git
 
 
 # Features
