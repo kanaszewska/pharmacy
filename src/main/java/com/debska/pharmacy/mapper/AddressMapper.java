@@ -11,7 +11,6 @@ public class AddressMapper {
                 .street(addressEntity.getStreet())
                 .zipCode(addressEntity.getZipCode())
                 .build();
-
     }
 
     public static AddressEntity mapAddressDTOtoEntity(AddressDTO addressDTO) {

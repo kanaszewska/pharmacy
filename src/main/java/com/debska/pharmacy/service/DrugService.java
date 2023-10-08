@@ -29,6 +29,11 @@ public class DrugService {
         this.producerRepository = producerRepository;
     }
 
+    /**
+     *
+     * @param drugDTOdata
+     * @return
+     */
     public String createDrug(DrugDTO drugDTOdata) {
 
         ProducerEntity producer =

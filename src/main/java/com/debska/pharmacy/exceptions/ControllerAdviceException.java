@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
 @ControllerAdvice
 @ResponseBody
 public class ControllerAdviceException {
@@ -31,6 +30,7 @@ public class ControllerAdviceException {
     }
 
 
+    //todo add test for it (use `mockmvc`)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ErrorDto> handleException(MethodArgumentNotValidException ex) {
