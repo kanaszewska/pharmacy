@@ -10,7 +10,7 @@
 
 
 # Features
-*
+
 
 # Problem Statement
 I created a tiny REST/JSON web service in Java using Spring Boot (RestController) with an API that supports basic Products' CRUD:
