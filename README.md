@@ -11,18 +11,33 @@
 
 # Features
 
+I created a tiny REST/JSON web service in Java using Spring Boot (RestController) with an API that supports basic CRUD:
 
-# Problem Statement
-I created a tiny REST/JSON web service in Java using Spring Boot (RestController) with an API that supports basic Products' CRUD:
+Producer:
+* Create a new producer
+* Get a list of all producers
+* Get a date of a single producer
+* Delete a single producer
 
-* Create a new Product
-* Get a list of all Products
-* Update a Product
+Drug:
+* Create a new drug
+* Get a list of all drugs
+* Get a date of a single drug
+* Delete a single drug
+* Update a drug
 
-The API should also support:
-* Placing an Order
-* Retrieving all orders within a given time period
-* A product should have a name and some representation of its price.
+User:
+* Create a new user
+* Get a list of all users
+* Get a date of a single user based on the address
+
+Order:
+* Placing an order
+* Retrieving all orders
+* Get a date of a single order
+* Delete a single order
+* Change the status of an order
+
 
 Each order should be recorded and have a list of products. 
 It should also have the buyer’s e-mail, and the time the order was placed. 
