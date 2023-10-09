@@ -47,12 +47,12 @@ Order:
 # Endpoints (examples)
 
 
-POST	/order - create a new order
-GET	/user/all-by-address - get all users by addresses
-GET	/drug/1 - get the drug by id
-GET /order/changeStatus/1 - change the status by order id 
-PUT /drug/2 - update the drug by id
-DELETE /producer/1 - delete producer by id
+* POST	/order - create a new order
+* GET	/user/all-by-address - get all users by addresses
+* GET	/drug/1 - get the drug by id
+* GET /order/changeStatus/1 - change the status by order id 
+* PUT /drug/2 - update the drug by id
+* DELETE /producer/1 - delete producer by id
 
 
 # Tests
