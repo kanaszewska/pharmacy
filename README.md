@@ -44,13 +44,23 @@ Order:
 * Each order should be recorded, have a list of drugs and also have the user’s data.
 * The total value of the order is always calculated, based on the prices of the drugs in it.
 
+# Endpoints (examples)
+
+
+POST	/order - create a new order
+GET	/user/all-by-address - get all users by addresses
+GET	/drug/1 - get the drug by id
+GET /order/changeStatus/1 - change the status by order id 
+PUT /drug/2 - update the drug by id
+DELETE /producer/1 - delete producer by id
+
 
 # Tests
 
 * JUnit 5
 * Mockito
 * MockMvc
-* Spring Boot Test:
+* Spring Boot Test
 
 
 
