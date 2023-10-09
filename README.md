@@ -1,7 +1,7 @@
 # Technologies Used
 * Java
 * Spring Boot
-* Hibernate
+* Hibernate (HQL)
 * Maven
 * Rest API
 * Git
@@ -45,12 +45,13 @@ Order:
 * The total value of the order is always calculated, based on the prices of the drugs in it.
 
 
-# Requirements
+# Tests
 
-* Implement your solution according to the above specification.
-* Provide unit tests.
-* Document your REST-API.
-* Provide a storage solution for persisting the web service’s state.
+* JUnit 5
+* Mockito
+* MockMvc
+* Spring Boot Test:
 
-Have a way to run the service with its dependencies (database etc) locally. 
-You can use either a simple script or docker or something else. It’s up to you.
+
+
+
